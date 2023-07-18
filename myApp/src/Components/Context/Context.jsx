@@ -1,29 +1,29 @@
-import { createContext, useEffect, useState } from 'react';
+// import { createContext, useEffect, useState } from 'react';
 
-const GlobalContext = createContext();
+// const GlobalContext = createContext();
 
-const GlobalProvider = ({ children }) => {
-  const [users, setUsers] = useState([]);
+// const GlobalProvider = ({ children }) => {
+//   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users');
-        const data = await response.json();
-        setUsers(data);
-      } catch (error) {
-        console.error('Terjadi kesalahan:', error);
-      }
-    };
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       try {
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users');
+//         const data = await response.json();
+//         setUsers(data);
+//       } catch (error) {
+//         console.error('Terjadi kesalahan:', error);
+//       }
+//     };
 
-    fetchData();
-  }, []);
+//     fetchData();
+//   }, []);
 
-  return (
-    <GlobalContext.Provider value={users}>
-      {children}
-    </GlobalContext.Provider>
-  );
-};
+//   return (
+//     <GlobalContext.Provider value={users}>
+//       {children}
+//     </GlobalContext.Provider>
+//   );
+// };
 
-export { GlobalContext, GlobalProvider };
+// export { GlobalContext, GlobalProvider };
