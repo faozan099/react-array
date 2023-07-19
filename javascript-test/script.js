@@ -312,12 +312,39 @@ for (let i = 0; i < sum2d2.length; i++) {
 console.log(numSum2);
 
 let sum2d3 = [[1, 2, 3, 4, 5]];
-let numSum3 = 0
-for (let i = 0; i < sum2d3.length; i++){
-  for(let j = 0; j < sum2d3[i].length; j++){
-    numSum3 += sum2d3[i][j]
+let numSum3 = 0;
+for (let i = 0; i < sum2d3.length; i++) {
+  for (let j = 0; j < sum2d3[i].length; j++) {
+    numSum3 += sum2d3[i][j];
   }
 }
-console.log(numSum3)
+console.log(numSum3);
 
 //   MAX MIN 2D ARRAY
+function maxArray(array) {
+  if (array.length === 0) {
+    return null;
+  }
+
+  let maxValues = [];
+
+  for (let subArray of array) {
+    if (subArray.length === 0) {
+      maxValues.push(null);
+    } else {
+      let max = subArray[0];
+      for (let i = 1; i < subArray.length; i++) {
+        if (subArray[i] > max) {
+          max = subArray[i];
+        }
+      }
+      maxValues.push(max);
+    }
+  }
+
+  return maxValues;
+}
+
+console.log("hasil:", maxArray([[1, 2, 3], [6, 4, 5], [7, 9, 8]]));
+console.log("hasil2", maxArray([ [1,2], [4,5,6] ]))
+console.log("hasil3", maxArray([ [4,2,5,1,3] ]))
