@@ -1,4 +1,4 @@
-// REVERSE ARRAY
+// REVERSE ARRAY ------------------------------------------------------------------------------
 let arr1 = [1, 4, 6, 7];
 let reversedArr = [];
 for (let i = arr1.length; i >= 0; i--) {
@@ -24,7 +24,7 @@ for (let i = arr3.length - 1; i >= 0; i--) {
 }
 console.log("reversedArray3", reversedArr3);
 
-//SUM ARRAY
+//SUM ARRAY ----------------------------------------------------------------------------------
 let sumArray = [8, 3, 9, 2, 5];
 let total = 0;
 for (let i = 0; i < sumArray.length; i++) {
@@ -59,7 +59,7 @@ for (let i = 0; i < sumArray5.length; i++) {
   total5 += sumArray5[i];
 }
 console.log("sumArray5", total5);
-// LINEAR SEARCH
+// LINEAR SEARCH ---------------------------------------------------------------------------------
 let linearSearch = [8, 3, 9, 2, 5];
 let cari = 3;
 let hasil = undefined;
@@ -89,7 +89,7 @@ for (let i = 0; i < linearSearch3.length; i++) {
   }
 }
 console.log("linearSearch3", hasil3);
-// FIZZ BUZZ ARRAY
+// FIZZ BUZZ ARRAY ---------------------------------------------------------------------------
 let fizzBuzzArray = [8, 3, 9, 2, 5];
 let result = [];
 for (let i = 0; i < fizzBuzzArray.length; i++) {
@@ -150,7 +150,7 @@ for (let i = 0; i < fizzBuzzArray4.length; i++) {
 }
 console.log("FizzBuzzArray4", result4);
 
-// GET 3&5 NUMBER
+// GET 3&5 NUMBER --------------------------------------------------------------------------
 let getNumber = [8, 3, 9, 2, 5];
 let resultNumber = [];
 for (let i = 0; i < getNumber.length; i++) {
@@ -163,48 +163,161 @@ if (resultNumber.length === 0) {
 }
 console.log("getNumber", resultNumber);
 
-let getNumber2 = [3 ,4 ,6 ,7 ,9]
-let resultNumber2 = []
-for (let i = 0; i < getNumber2.length; i++){
-  if (getNumber2[i] % 3 === 0 || getNumber2[i] % 5 === 0){
+let getNumber2 = [3, 4, 6, 7, 9];
+let resultNumber2 = [];
+for (let i = 0; i < getNumber2.length; i++) {
+  if (getNumber2[i] % 3 === 0 || getNumber2[i] % 5 === 0) {
     resultNumber2[resultNumber2.length] = getNumber2[i];
   }
 }
-if(resultNumber2.length === 0){
-  resultNumber2 = null
+if (resultNumber2.length === 0) {
+  resultNumber2 = null;
 }
-console.log("getNumber2", resultNumber2)
+console.log("getNumber2", resultNumber2);
 
-let getNumber3 = [4 ,5 ,9 ,15 ,19]
-let resultNumber3 = []
-for(let i = 0; i < getNumber3.length; i++){
-  if (getNumber3[i] % 3 === 0 || getNumber3[i] % 5 === 0){
-    resultNumber3[resultNumber3.length] = getNumber3[i]
+let getNumber3 = [4, 5, 9, 15, 19];
+let resultNumber3 = [];
+for (let i = 0; i < getNumber3.length; i++) {
+  if (getNumber3[i] % 3 === 0 || getNumber3[i] % 5 === 0) {
+    resultNumber3[resultNumber3.length] = getNumber3[i];
   }
 }
-if(resultNumber3.length === 0){
-  resultNumber3 = null
+if (resultNumber3.length === 0) {
+  resultNumber3 = null;
 }
-console.log("getNumber3", resultNumber3)
+console.log("getNumber3", resultNumber3);
 
-let getNumber4 = [2 ,4 ,7 ,8 ,1]
-let resultNumber4 = []
-for (let i = 0; i < getNumber4.length; i++){
-  if(getNumber4[i] % 3 === 0 || getNumber4[i] % 5 === 0){
-    resultNumber4[resultNumber4.length] = getNumber4[i]
+let getNumber4 = [2, 4, 7, 8, 1];
+let resultNumber4 = [];
+for (let i = 0; i < getNumber4.length; i++) {
+  if (getNumber4[i] % 3 === 0 || getNumber4[i] % 5 === 0) {
+    resultNumber4[resultNumber4.length] = getNumber4[i];
   }
 }
-if(resultNumber4.length === 0){
-  resultNumber4 = null
+if (resultNumber4.length === 0) {
+  resultNumber4 = null;
 }
-console.log("getNumber4", resultNumber4)
+console.log("getNumber4", resultNumber4);
 
-// PALIANDROME
+// PALINDROME -----------------------------------------------------------------------------------
+let string = "Hallo";
+let stringText = "";
+for (let i = string.length - 1; i >= 0; i--) {
+  stringText += string[i];
+}
+let palindrome = string === stringText;
+console.log("palindrome", palindrome);
 
-// MAX & MIN
+let string2 = "apa";
+let stringText2 = "";
+for (let i = string2.length - 1; i >= 0; i--) {
+  stringText2 += string2[i];
+}
+let palindrome2 = stringText2 === string2;
+console.log("palindrome2", palindrome2);
 
-//   GET 2D ARRAY
+let string3 = "apa";
+let stringText3 = "";
+for (let i = string3.length - 1; i >= 0; i--) {
+  stringText3 += string3[i];
+}
+let palindrome3 = stringText3 === string3;
+console.log("palindrome3", palindrome3);
 
-//   SUM 2D ARRAY
+let string4 = "katak";
+let stringText4 = "";
+for (let i = string4.length - 1; i >= 0; i--) {
+  stringText4 += string4[i];
+}
+let palindrome4 = stringText4 === string4;
+console.log("palindrome4", palindrome4);
+
+let string5 = "kasur";
+let stringText5 = "";
+for (let i = string5.length - 1; i >= 0; i--) {
+  stringText5 += string5[i];
+}
+let palindrome5 = stringText5 === string5;
+console.log("palindrome5", palindrome5);
+
+// MAX & MIN -------------------------------------------------------------------------------
+let data = [8, 3, 9, 4, 5];
+
+if (!Array.isArray(data) || data.length === 0) {
+  console.log(null);
+} else {
+  max = data[0];
+  min = data[0];
+
+  for (let i = 1; i < data.length; i++) {
+    if (data[i] < min) {
+      min = data[i];
+    }
+  }
+  console.log("max", max);
+  console.log("min", min);
+}
+
+let data2 = [5, 5, 5, 5, 5];
+if (!Array.isArray(data2) || data.length === 0) {
+  console.log(null);
+} else {
+  max = data2[0];
+  min = data2[0];
+
+  for (let i = 1; i < data2.length; i++) {
+    if (data2[i] < min) {
+      min = data[i];
+    }
+  }
+  console.log("max", max);
+  console.log("min", min);
+}
+
+//   GET 2D ARRAY ---------------------------------------------------------------
+let beli = [
+  ["topi", 3],
+  ["kaos", 6],
+  ["jeans", 4],
+];
+
+for (let i = 0; i < beli.length; i++) {
+  let [barang, jumlah] = beli[i];
+  console.log(`jumlah ${barang} ada ${jumlah}`);
+}
+//   SUM 2D ARRAY --------------------------------------------------------------
+let sum2d = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+let numSum = 0;
+for (let i = 0; i < sum2d.length; i++) {
+  for (let j = 0; j < sum2d[i].length; j++) {
+    numSum += sum2d[i][j];
+  }
+}
+console.log(numSum);
+
+let sum2d2 = [
+  [1, 2],
+  [4, 5, 6],
+];
+let numSum2 = 0;
+for (let i = 0; i < sum2d2.length; i++) {
+  for (let j = 0; j < sum2d2[i].length; j++) {
+    numSum2 += sum2d2[i][j];
+  }
+}
+console.log(numSum2);
+
+let sum2d3 = [[1, 2, 3, 4, 5]];
+let numSum3 = 0
+for (let i = 0; i < sum2d3.length; i++){
+  for(let j = 0; j < sum2d3[i].length; j++){
+    numSum3 += sum2d3[i][j]
+  }
+}
+console.log(numSum3)
 
 //   MAX MIN 2D ARRAY
