@@ -1,18 +1,18 @@
 // REVERSE ARRAY ------------------------------------------------------------------------------
 let arr1 = [1, 4, 6, 7];
 let reversedArr = [];
-for (let i = arr1.length; i >= 0; i--) {
-  if (arr1[i] !== undefined) {
-    reversedArr = [arr1[i], ...reversedArr];
+for (let i = arr1.length -1; i>=0; i--){
+  if(arr1[i] !== undefined){
+    reversedArr = [...reversedArr, arr1[i]]
   }
 }
 console.log("reversedArray:", reversedArr);
 
 let arr2 = [7, 4, 2, 1];
 let reversedArr2 = [];
-for (let i = arr2.length; i >= 0; i--) {
+for (let i = arr2.length -1; i >= 0; i--) {
   if (arr2[i] !== undefined) {
-    reversedArr2 = [arr2[i], ...reversedArr2];
+    reversedArr2 = [...reversedArr2, arr2[i]];
   }
 }
 console.log("reversedArray2", reversedArr2);
@@ -20,7 +20,7 @@ console.log("reversedArray2", reversedArr2);
 let arr3 = [5];
 let reversedArr3 = [];
 for (let i = arr3.length - 1; i >= 0; i--) {
-  reversedArr3 = [arr3[i], ...reversedArr3];
+  reversedArr3 = [...reversedArr3, arr3[i]];
 }
 console.log("reversedArray3", reversedArr3);
 
@@ -345,6 +345,19 @@ function maxArray(array) {
   return maxValues;
 }
 
-console.log("hasil:", maxArray([[1, 2, 3], [6, 4, 5], [7, 9, 8]]));
-console.log("hasil2", maxArray([ [1,2], [4,5,6] ]))
-console.log("hasil3", maxArray([ [4,2,5,1,3] ]))
+console.log(
+  "hasil:",
+  maxArray([
+    [1, 2, 3],
+    [6, 4, 5],
+    [7, 9, 8],
+  ])
+);
+console.log(
+  "hasil2",
+  maxArray([
+    [1, 2],
+    [4, 5, 6],
+  ])
+);
+console.log("hasil3", maxArray([[4, 2, 5, 1, 3]]));
